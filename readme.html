@@ -12801,7 +12801,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Import libraries</span>
@@ -12836,7 +12836,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">student_data</span><span class="p">[</span><span class="n">student_data</span><span class="p">[</span><span class="s1">&#39;passed&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;yes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -12850,7 +12850,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -13033,14 +13033,14 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># TODO: Calculate number of students</span>
 <span class="n">n_students</span> <span class="o">=</span> <span class="n">student_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># TODO: Calculate number of features</span>
-<span class="n">n_features</span> <span class="o">=</span> <span class="n">student_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">n_features</span> <span class="o">=</span> <span class="p">(</span><span class="n">student_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># TODO: Calculate passing students</span>
 <span class="n">n_passed</span> <span class="o">=</span> <span class="n">student_data</span><span class="p">[</span><span class="n">student_data</span><span class="p">[</span><span class="s1">&#39;passed&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;yes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -13049,7 +13049,7 @@ div#notebook {
 <span class="n">n_failed</span> <span class="o">=</span> <span class="n">student_data</span><span class="p">[</span><span class="n">student_data</span><span class="p">[</span><span class="s1">&#39;passed&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;no&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># TODO: Calculate graduation rate</span>
-<span class="n">grad_rate</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_passed</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="n">n_students</span>
+<span class="n">grad_rate</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_passed</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">n_students</span><span class="p">)</span>
 
 <span class="c1"># Print the results</span>
 <span class="k">print</span> <span class="s2">&quot;Total number of students: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_students</span><span class="p">)</span>
@@ -13070,10 +13070,10 @@ div#notebook {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Total number of students: 395
-Number of features: 31
+Number of features: 30
 Number of students who passed: 265
 Number of students who failed: 130
-Graduation rate of the class: 67.00%
+Graduation rate of the class: 67.09%
 </pre>
 </div>
 </div>
@@ -13096,7 +13096,7 @@ Graduation rate of the class: 67.00%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Extract feature columns</span>
@@ -13178,7 +13178,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">preprocess_features</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -13249,7 +13249,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># TODO: Import any additional functionality you may need here</span>
@@ -13354,11 +13354,12 @@ Testing set has 95 samples.
 <li><strong>SVM</strong></li>
 </ul>
 <p>a. SVM's before deep learning systems were the state of the art optimum classifiers for many machine learning tasks (reference : <a href="https://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering">https://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering</a>)</p>
-<p>b. Just like Naive Bayes classifier SVM is also a high bias classfier and hence works good with small data sets. The SVM provides theoretical guarantees in providing optimal decision boundaries. Also through kernel trick it can learn non-linear decision boundaries.</p>
-<p>c. Naive Bayes have following weaknesses:</p>
+<p>b. The SVM provides theoretical guarantees in providing optimal decision boundaries as it learns maximal separable decision boundaries. Also through kernel trick it can learn non-linear decision boundaries.</p>
+<p>c. SVM have following weaknesses:</p>
 
-<pre><code>- Only allows binary classification
-- No probabilistic confidence for its classification predictions
+<pre><code>- Choice of Kernel is a parameter to manually tune, in some cases we need to manually engineer the Kernel function which can encode the domain information.
+- Takes more time in training and predicting than other models say Naive Bayes.
+- Consumes lots of memory in larger dataset.
 
 </code></pre>
 <p>d. Just like Naive Bayes SVM is a good fit as it is also a high bias classifier and hence require less number of features. We can learn both linear and non-linear decision boundaries using SVM hence we can try kernel as hyperparameter while training the model to check what kind of decision boundary is suitable.</p>
@@ -13393,7 +13394,7 @@ Testing set has 95 samples.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">train_classifier</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
@@ -13466,7 +13467,7 @@ Testing set has 95 samples.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># TODO: Import the three supervised learning models from sklearn</span>
@@ -13479,8 +13480,8 @@ Testing set has 95 samples.
 
 <span class="c1"># TODO: Initialize the three models</span>
 <span class="n">clf_A</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
-<span class="n">clf_B</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">()</span>
-<span class="n">clf_C</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+<span class="n">clf_B</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">clf_C</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
 <span class="c1"># TODO: Set up the training set sizes</span>
 <span class="n">X_train_100</span> <span class="o">=</span> <span class="mi">100</span>
@@ -13525,7 +13526,7 @@ Made predictions in 0.0002 seconds.
 F1 score for test set: 0.2791.
 Training a GaussianNB using a training set size of 200. . .
 Trained model in 0.0007 seconds
-Made predictions in 0.0003 seconds.
+Made predictions in 0.0005 seconds.
 F1 score for training set: 0.7985.
 Made predictions in 0.0002 seconds.
 F1 score for test set: 0.8299.
@@ -13533,42 +13534,42 @@ Training a GaussianNB using a training set size of 300. . .
 Trained model in 0.0008 seconds
 Made predictions in 0.0004 seconds.
 F1 score for training set: 0.7873.
-Made predictions in 0.0003 seconds.
+Made predictions in 0.0002 seconds.
 F1 score for test set: 0.8258.
 -------------------------------------
 Training a SVC using a training set size of 100. . .
-Trained model in 0.0011 seconds
+Trained model in 0.0010 seconds
 Made predictions in 0.0007 seconds.
 F1 score for training set: 0.9028.
-Made predictions in 0.0006 seconds.
+Made predictions in 0.0007 seconds.
 F1 score for test set: 0.8408.
 Training a SVC using a training set size of 200. . .
-Trained model in 0.0029 seconds
-Made predictions in 0.0024 seconds.
+Trained model in 0.0028 seconds
+Made predictions in 0.0021 seconds.
 F1 score for training set: 0.8571.
 Made predictions in 0.0011 seconds.
 F1 score for test set: 0.8462.
 Training a SVC using a training set size of 300. . .
-Trained model in 0.0058 seconds
-Made predictions in 0.0040 seconds.
+Trained model in 0.0069 seconds
+Made predictions in 0.0044 seconds.
 F1 score for training set: 0.8739.
 Made predictions in 0.0014 seconds.
 F1 score for test set: 0.8354.
 -------------------------------------
 Training a LogisticRegression using a training set size of 100. . .
-Trained model in 0.0010 seconds
-Made predictions in 0.0002 seconds.
+Trained model in 0.0037 seconds
+Made predictions in 0.0019 seconds.
 F1 score for training set: 0.9051.
-Made predictions in 0.0001 seconds.
+Made predictions in 0.0002 seconds.
 F1 score for test set: 0.7972.
 Training a LogisticRegression using a training set size of 200. . .
-Trained model in 0.0012 seconds
+Trained model in 0.0013 seconds
 Made predictions in 0.0001 seconds.
 F1 score for training set: 0.8192.
 Made predictions in 0.0001 seconds.
 F1 score for test set: 0.8310.
 Training a LogisticRegression using a training set size of 300. . .
-Trained model in 0.0023 seconds
+Trained model in 0.0024 seconds
 Made predictions in 0.0002 seconds.
 F1 score for training set: 0.8134.
 Made predictions in 0.0001 seconds.
@@ -13792,7 +13793,7 @@ F1 score for test set: 0.8138.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># TODO: Import &#39;GridSearchCV&#39; and &#39;make_scorer&#39;</span>
@@ -13832,7 +13833,7 @@ F1 score for test set: 0.8138.
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Made predictions in 0.0039 seconds.
+<pre>Made predictions in 0.0037 seconds.
 Tuned model has a training F1 score of 0.8190.
 Made predictions in 0.0013 seconds.
 Tuned model has a testing F1 score of 0.8447.
@@ -13862,7 +13863,7 @@ Tuned model has a testing F1 score of 0.8447.
 <p><strong>Answer: </strong></p>
 <p>Tuned model has a training F1 score of 0.8190.</p>
 <p>Tuned model has a testing F1 score of 0.8447.</p>
-<p>We can see that the model is performing better on test data set by almost 1 %.</p>
+<p>We can see that the model is performing better on test data set by almost 1% after tuning the parameters.</p>
 
 </div>
 </div>
